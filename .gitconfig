@@ -1,0 +1,51 @@
+[user]
+  name   = MasayukiFukada
+[user]
+  email  = m.fukada0813@gmail.com
+[credential]
+  helper = store
+[alias]
+  b      = branch
+  d      = diff
+  dh     = diff HEAD
+  emp    = commit --allow-empty -m "Commit Empty !"
+  f      = fetch
+  i      = commit --verbose
+  iam    = commit --amend
+  ls     = ls-files
+  mg     = merge
+  o      = checkout
+  pd     = pull --rebase origin develop
+  pf     = push --force-with-lease
+  pu     = push
+  rc     = rebase --continue
+  rm     = rm --cached
+  sb     = show-branch --more
+  sh     = show
+  s      = status --short --branch
+  w      = worktree
+  wa     = worktree add
+  wl     = worktree list
+  wp     = worktree prune
+  graph  = log --graph --date-order -C -M --pretty=format:\"[%h] %ad <%an> %Cgreen%d%Creset %s\" --all --date=short
+  lg     = log --graph --all --pretty=format:'%Cred%h%Creset -%s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d%Creset' --abbrev-commit --date=relative
+  tree   = log --graph --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+[pull]
+  rebase        = true
+[help]
+  autocorrect   = 1
+[merge]
+  ff            = false
+  keepBackup    = false
+[fetch]
+  prune         = true
+[rebase]
+  autostash     = true
+  autosquash    = true
+[stash]
+  showPatch     = true
+[push]
+  default       = current
+[pack]
+  windowMemory  = 10m
+  packSizeLimit = 20m
