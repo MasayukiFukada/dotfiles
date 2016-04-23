@@ -1,5 +1,5 @@
 scriptencoding utf-8
-" vim: ft=vim ts=8 sts=2 sw=2 tw=0: (この行に関しては:help modelineを参照)
+" vim: ft=vim ts=8 sts=2 sw=2 tw=0
 "
 " An example for a Japanese version gvimrc file.
 " 日本語版のデフォルトGUI設定ファイル(gvimrc) - Vim7用試作
@@ -63,29 +63,30 @@ endif
 
 "---------------------------------------------------------------------------
 " カラー設定:
-colorscheme spring4sjp
+colorscheme wombat
 
 "---------------------------------------------------------------------------
 " フォント設定:
 "
-if has('win32')
-  " Windows用
-  "set guifont=MS_Gothic:h12:cSHIFTJIS
-  set guifont=CodeM\ Regular\ for\ Powerline:h14:cSHIFTJIS
-  "set guifont=MS_Mincho:h12:cSHIFTJIS
-  " 行間隔の設定
-  set linespace=1
-  " 一部のUCS文字の幅を自動計測して決める
-  if has('kaoriya')
-    set ambiwidth=auto
-  endif
-  set renderoptions=type:directx,renmode:5
-elseif has('mac')
-  set guifont=Osaka－等幅:h14
-elseif has('xfontset')
-  " UNIX用 (xfontsetを使用)
-  set guifontset=a14,r14,k14
-endif
+" if has('win32')
+"   " Windows用
+"   "set guifont=MS_Gothic:h12:cSHIFTJIS
+"   set guifont=CodeM:h14:cSHIFTJIS
+"   "set guifont=MS_Mincho:h12:cSHIFTJIS
+"   " 行間隔の設定
+"   set linespace=1
+"   " 一部のUCS文字の幅を自動計測して決める
+"   if has('kaoriya')
+"     set ambiwidth=auto
+"   endif
+"   set renderoptions=type:directx,renmode:5
+" elseif has('mac')
+"   set guifont=Osaka－等幅:h14
+" elseif has('xfontset')
+"   " UNIX用 (xfontsetを使用)
+"   set guifontset=a14,r14,k14
+" endif
+set guifont=CodeM\ 16
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:

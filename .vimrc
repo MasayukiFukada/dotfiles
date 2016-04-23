@@ -43,58 +43,58 @@ if 1 && filereadable($VIM . '/vimrc_local.vim')
   endif
 endif
 
-"---------------------------------------------------------------------------
-" ユーザ優先設定($HOME/.vimrc_first.vim)があれば読み込む。読み込んだ後に変数
-" g:vimrc_first_finishに非0な値が設定されていた場合には、それ以上の設定ファ
-" イルの読込を中止する。
-if 1 && exists('$HOME') && filereadable($HOME . '/.vimrc_first.vim')
-  unlet! g:vimrc_first_finish
-  source $HOME/.vimrc_first.vim
-  if exists('g:vimrc_first_finish') && g:vimrc_first_finish != 0
-    finish
-  endif
-endif
-
-" plugins下のディレクトリをruntimepathへ追加する。
-for s:path in split(glob($VIM.'/plugins/*'), '\n')
-  if s:path !~# '\~$' && isdirectory(s:path)
-    let &runtimepath = &runtimepath.','.s:path
-  end
-endfor
-unlet s:path
-
-"---------------------------------------------------------------------------
-" 日本語対応のための設定:
+" "---------------------------------------------------------------------------
+" " ユーザ優先設定($HOME/.vimrc_first.vim)があれば読み込む。読み込んだ後に変数
+" " g:vimrc_first_finishに非0な値が設定されていた場合には、それ以上の設定ファ
+" " イルの読込を中止する。
+" if 1 && exists('$HOME') && filereadable($HOME . '/.vimrc_first.vim')
+"   unlet! g:vimrc_first_finish
+"   source $HOME/.vimrc_first.vim
+"   if exists('g:vimrc_first_finish') && g:vimrc_first_finish != 0
+"     finish
+"   endif
+" endif
 "
-" ファイルを読込む時にトライする文字エンコードの順序を確定する。漢字コード自
-" 動判別機能を利用する場合には別途iconv.dllが必要。iconv.dllについては
-" README_w32j.txtを参照。ユーティリティスクリプトを読み込むことで設定される。
-source $VIM/plugins/kaoriya/encode_japan.vim
-" メッセージを日本語にする (Windowsでは自動的に判断・設定されている)
-if !(has('win32') || has('mac')) && has('multi_lang')
-  if !exists('$LANG') || $LANG.'X' ==# 'X'
-    if !exists('$LC_CTYPE') || $LC_CTYPE.'X' ==# 'X'
-      language ctype ja_JP.eucJP
-    endif
-    if !exists('$LC_MESSAGES') || $LC_MESSAGES.'X' ==# 'X'
-      language messages ja_JP.eucJP
-    endif
-  endif
-endif
-" MacOS Xメニューの日本語化 (メニュー表示前に行なう必要がある)
-if has('mac')
-  set langmenu=japanese
-endif
-" 日本語入力用のkeymapの設定例 (コメントアウト)
-if has('keymap')
-  " ローマ字仮名のkeymap
-  "silent! set keymap=japanese
-  "set iminsert=0 imsearch=0
-endif
-" 非GUI日本語コンソールを使っている場合の設定
-if !has('gui_running') && &encoding != 'cp932' && &term == 'win32'
-  set termencoding=cp932
-endif
+" " plugins下のディレクトリをruntimepathへ追加する。
+" for s:path in split(glob($VIM.'/plugins/*'), '\n')
+"   if s:path !~# '\~$' && isdirectory(s:path)
+"     let &runtimepath = &runtimepath.','.s:path
+"   end
+" endfor
+" unlet s:path
+
+" "---------------------------------------------------------------------------
+" " 日本語対応のための設定:
+" "
+" " ファイルを読込む時にトライする文字エンコードの順序を確定する。漢字コード自
+" " 動判別機能を利用する場合には別途iconv.dllが必要。iconv.dllについては
+" " README_w32j.txtを参照。ユーティリティスクリプトを読み込むことで設定される。
+" source $VIM/plugins/kaoriya/encode_japan.vim
+" " メッセージを日本語にする (Windowsでは自動的に判断・設定されている)
+" if !(has('win32') || has('mac')) && has('multi_lang')
+"   if !exists('$LANG') || $LANG.'X' ==# 'X'
+"     if !exists('$LC_CTYPE') || $LC_CTYPE.'X' ==# 'X'
+"       language ctype ja_JP.eucJP
+"     endif
+"     if !exists('$LC_MESSAGES') || $LC_MESSAGES.'X' ==# 'X'
+"       language messages ja_JP.eucJP
+"     endif
+"   endif
+" endif
+" " MacOS Xメニューの日本語化 (メニュー表示前に行なう必要がある)
+" if has('mac')
+"   set langmenu=japanese
+" endif
+" " 日本語入力用のkeymapの設定例 (コメントアウト)
+" if has('keymap')
+"   " ローマ字仮名のkeymap
+"   "silent! set keymap=japanese
+"   "set iminsert=0 imsearch=0
+" endif
+" " 非GUI日本語コンソールを使っている場合の設定
+" if !has('gui_running') && &encoding != 'cp932' && &term == 'win32'
+"   set termencoding=cp932
+" endif
 
 "---------------------------------------------------------------------------
 " メニューファイルが存在しない場合は予め'guioptions'を調整しておく
@@ -223,27 +223,27 @@ if has('mac')
   set iskeyword=@,48-57,_,128-167,224-235
 endif
 
-"---------------------------------------------------------------------------
-" KaoriYaでバンドルしているプラグインのための設定
-
-" autofmt: 日本語文章のフォーマット(折り返し)プラグイン.
-set formatexpr=autofmt#japanese#formatexpr()
-
-" vimdoc-ja: 日本語ヘルプを無効化する.
-if kaoriya#switch#enabled('disable-vimdoc-ja')
-  let &rtp = join(filter(split(&rtp, ','), 'v:val !~ "[/\\\\]plugins[/\\\\]vimdoc-ja"'), ',')
-endif
-
-" vimproc: 同梱のvimprocを無効化する
-if kaoriya#switch#enabled('disable-vimproc')
-  let &rtp = join(filter(split(&rtp, ','), 'v:val !~ "[/\\\\]plugins[/\\\\]vimproc$"'), ',')
-endif
+" "---------------------------------------------------------------------------
+" " KaoriYaでバンドルしているプラグインのための設定
+"
+" " autofmt: 日本語文章のフォーマット(折り返し)プラグイン.
+" set formatexpr=autofmt#japanese#formatexpr()
+"
+" " vimdoc-ja: 日本語ヘルプを無効化する.
+" if kaoriya#switch#enabled('disable-vimdoc-ja')
+"   let &rtp = join(filter(split(&rtp, ','), 'v:val !~ "[/\\\\]plugins[/\\\\]vimdoc-ja"'), ',')
+" endif
+"
+" " vimproc: 同梱のvimprocを無効化する
+" if kaoriya#switch#enabled('disable-vimproc')
+"   let &rtp = join(filter(split(&rtp, ','), 'v:val !~ "[/\\\\]plugins[/\\\\]vimproc$"'), ',')
+" endif
 
 "--------------------------------------------------
 if &compatible
   set nocompatible
 endif
-set runtimepath+=C:/share/tools/vim_dein/dein.vim
+set runtimepath+=~/.vim/dein.vim
 
 call dein#begin(expand('~/.vim/dein'))
 
@@ -267,9 +267,9 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#end()
 "--------------------------------------------------
 " ローカルマシン設定
-set directory=C:/share/tmp/vim/swap
-set undodir=C:/share/tmp/vim/undo
-set backupdir=C:/share/tmp/vim/backup
+set directory=~/.vim/swap
+set undodir=~/.vim/undo
+set backupdir=~/.vim/bkup
 
 set relativenumber
 set number
