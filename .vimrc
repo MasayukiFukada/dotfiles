@@ -268,6 +268,7 @@ call dein#end()
 "--------------------------------------------------
 " ローカルマシン設定
 set directory=~/.vim/swap
+set undofile
 set undodir=~/.vim/undo
 set backupdir=~/.vim/bkup
 
