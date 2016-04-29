@@ -56,7 +56,24 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/home/minamo/.rvm/gems/ruby-2.2.3/bin:/home/minamo/.rvm/gems/ruby-2.2.3@global/bin:/home/minamo/.rvm/rubies/ruby-2.2.3/bin:/home/minamo/tools/go/go-lang/bin:/home/minamo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/minamo/.rvm/bin"
+path=(
+  $path
+  "/usr/local/heroku/bin"
+  "/home/minamo/.rvm/gems/ruby-2.2.3/bin"
+  "/home/minamo/.rvm/gems/ruby-2.2.3@global/bin"
+  "/home/minamo/.rvm/rubies/ruby-2.2.3/bin"
+  "/home/minamo/tools/go/go-lang/bin"
+  "/home/minamo/bin"
+  "/usr/local/sbin"
+  "/usr/local/bin"
+  "/usr/sbin"
+  "/usr/bin"
+  "/sbin"
+  "/bin"
+  "/usr/games"
+  "/usr/local/games"
+  "/home/minamo/.rvm/bin"
+)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,91 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# # 昔のプロンプト
-# # autoload -Uz promptinit
-# # promptinit
-# # prompt fire red magenta blue white white white
-#
-# # ----- PROMPT -----
-# ## PROMPT
-# PROMPT=$'%B[%h]%b %F{cyan}%n%F{white}@%F{magenta}%m %F{blue}[%~] %F{white}(`branch-status-check`)\n%F{yellow}(*・ω・)%F{white}< '
-# setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
-#
-# # {{{ methods for RPROMPT
-# # fg[color]表記と$reset_colorを使いたい
-# # @see https://wiki.archlinux.org/index.php/zsh
-# autoload -U colors; colors
-# function branch-status-check {
-#     local prefix branchname suffix
-#         # .gitの中だから除外
-#         if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
-#             return
-#         fi
-#         branchname=`get-branch-name`
-#         # ブランチ名が無いので除外
-#         if [[ -z $branchname ]]; then
-#             return
-#         fi
-#         prefix=`get-branch-status` #色だけ返ってくる
-#         suffix='%{'${reset_color}'%}'
-#         echo ${prefix}${branchname}${suffix}
-# }
-# function get-branch-name {
-#     # gitディレクトリじゃない場合のエラーは捨てます
-#     echo `git rev-parse --abbrev-ref HEAD 2> /dev/null`
-# }
-# function get-branch-status {
-#     local res color
-#         output=`git status 2> /dev/null`
-#         if [[ -n `echo $output | grep "^nothing to commit"` ]]; then
-#             res=':' # status Clean
-#             color='%{'${fg[green]}'%}'
-#         elif [[ -n `echo $output | grep "^# Untracked files:"` ]]; then
-#             res='?:' # Untracked
-#             color='%{'${fg[yellow]}'%}'
-#         elif [[ -n `echo $output | grep "^# Changes not staged for commit:"` ]]; then
-#             res='M:' # Modified
-#             color='%{'${fg[red]}'%}'
-#         else
-#             res='A:' # Added to commit
-#             color='%{'${fg[cyan]}'%}'
-#         fi
-#         # echo ${color}${res}'%{'${reset_color}'%}'
-#         echo ${color} # 色だけ返す
-# }
-# # }}}
-#
-# setopt histignorealldups sharehistory
-#
-# # Use emacs keybindings even if our EDITOR is set to vi
-# bindkey -e
-
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-
-# # Use modern completion system
-# autoload -Uz compinit
-# compinit
-#
-# zstyle ':completion:*' auto-description 'specify: %d'
-# zstyle ':completion:*' completer _expand _complete _correct _approximate
-# zstyle ':completion:*' format 'Completing %d'
-# zstyle ':completion:*' group-name ''
-# zstyle ':completion:*' menu select=2
-# eval "$(dircolors -b)"
-# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-# zstyle ':completion:*' list-colors ''
-# zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-# zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-# zstyle ':completion:*' menu select=long
-# zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-# zstyle ':completion:*' use-compctl false
-# zstyle ':completion:*' verbose true
-#
-# zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-# zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #>>> 以下追加
 export EDITOR="vim"
@@ -178,6 +114,8 @@ export LANG=ja_JP.UTF-8
 export XMODIFIERS=@im=uim
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export GOPATH=$HOME/.go
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
 
 #OSによって存在しないコマンドはコメントアウトしている
 alias awk='gawk'
