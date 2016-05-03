@@ -1,5 +1,5 @@
 scriptencoding utf-8
-" vim: ft=vim ts=8 sts=2 sw=2 tw=0: (この行に関しては:help modelineを参照)
+" vim: ft=vim ts=8 sts=2 sw=2 tw=0
 "
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
@@ -261,6 +261,7 @@ call dein#add('Shougo/vimproc.vim', {
 call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/neosnippet')
+
 call dein#add('itchyny/lightline.vim')
 call dein#add('editorconfig/editorconfig-vim')
 
@@ -285,6 +286,8 @@ set clipboard+=unnamed
 set guicursor=a:blinkon0
 set vb
 set t_vb=
+
+set colorcolumn=80
 
 cab ccs colorscheme
 

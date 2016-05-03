@@ -86,7 +86,7 @@ colorscheme wombat
 "   " UNIX用 (xfontsetを使用)
 "   set guifontset=a14,r14,k14
 " endif
-set guifont=CodeM\ 16
+set guifont=CodeM\ 15
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:
