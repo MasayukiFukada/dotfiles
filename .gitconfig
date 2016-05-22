@@ -1,0 +1,36 @@
+[user]
+  name   = MasayukiFukada
+[user]
+  email  = m.fukada0813@gmail.com
+[credential]
+  helper = store
+[alias]
+  amend  = commit --amend
+  info   = status --short --branch
+  update = pull --rebase origin develop
+  press  = push --force-with-lease
+  remove = rm --cached
+  save   = commit --verbose
+  switch = checkout
+  graph  = log --graph --date-order -C -M --pretty=format:\"[%h] %C(bold green)%d%Creset %s\" --all --date=short
+  lg     = log --graph --all --pretty=format:'%C(red)%h%Creset %s %C(green)(%cr) %C(bold yellow)%d%Creset' --abbrev-commit --date=relative
+  tree   = log --graph --date=short --pretty='format:%C(yellow)%h%Creset %s %C(bold red)%d%Creset'
+[pull]
+  rebase        = true
+[help]
+  autocorrect   = 1
+[merge]
+  ff            = false
+  keepBackup    = false
+[fetch]
+  prune         = true
+[rebase]
+  autostash     = true
+  autosquash    = true
+[stash]
+  showPatch     = true
+[push]
+  default       = current
+[pack]
+  windowMemory  = 10m
+  packSizeLimit = 20m
