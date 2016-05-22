@@ -291,5 +291,7 @@ set colorcolumn=80
 
 cab ccs colorscheme
 
+set runtimepath+=$GOPATH/src/github.com/golang/lint/misc/vim
+
 " Copyright (C) 2009-2013 KaoriYa/MURAOKA Taro
 

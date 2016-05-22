@@ -5,31 +5,16 @@
 [credential]
   helper = store
 [alias]
-  b      = branch
-  d      = diff
-  dh     = diff HEAD
-  emp    = commit --allow-empty -m "Commit Empty !"
-  f      = fetch
-  i      = commit --verbose
-  iam    = commit --amend
-  ls     = ls-files
-  mg     = merge
-  o      = checkout
-  pd     = pull --rebase origin develop
-  pf     = push --force-with-lease
-  pu     = push
-  rc     = rebase --continue
-  rm     = rm --cached
-  sb     = show-branch --more
-  sh     = show
-  s      = status --short --branch
-  w      = worktree
-  wa     = worktree add
-  wl     = worktree list
-  wp     = worktree prune
-  graph  = log --graph --date-order -C -M --pretty=format:\"[%h] %ad <%an> %Cgreen%d%Creset %s\" --all --date=short
-  lg     = log --graph --all --pretty=format:'%Cred%h%Creset -%s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d%Creset' --abbrev-commit --date=relative
-  tree   = log --graph --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+  amend  = commit --amend
+  info   = status --short --branch
+  update = pull --rebase origin develop
+  press  = push --force-with-lease
+  remove = rm --cached
+  save   = commit --verbose
+  switch = checkout
+  graph  = log --graph --date-order -C -M --pretty=format:\"[%h] %C(bold green)%d%Creset %s\" --all --date=short
+  lg     = log --graph --all --pretty=format:'%C(red)%h%Creset %s %C(green)(%cr) %C(bold yellow)%d%Creset' --abbrev-commit --date=relative
+  tree   = log --graph --date=short --pretty='format:%C(yellow)%h%Creset %s %C(bold red)%d%Creset'
 [pull]
   rebase        = true
 [help]

@@ -113,6 +113,7 @@ export EDITOR="vim"
 export LANG=ja_JP.UTF-8
 export XMODIFIERS=@im=uim
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/.go
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
