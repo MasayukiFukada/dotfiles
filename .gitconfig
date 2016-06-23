@@ -1,7 +1,7 @@
 [user]
-  name   = MasayukiFukada
+  name   = fukada
 [user]
-  email  = m.fukada0813@gmail.com
+  email  = fukada.531@fssoftware.co.jp
 [credential]
   helper = store
 [alias]
@@ -42,6 +42,7 @@
 [diff]
   tool = meld
   indentHeuristic = true
+  compactionHeuristic = true
 [difftool "meld"]
   path = meld
   cmd = meld $LOCAL $REMOTE
@@ -50,9 +51,9 @@
 [mergetool "meld"]
   cmd = meld $LOCAL $BASE $REMOTE --auto-merge
 [pager]
-  log           = diff-so-fancy | less --tabs=4
-  show          = diff-so-fancy | less --tabs=4
-  diff          = diff-so-fancy | less --tabs=4
+  log           = diff-so-fancy | peco
+  show          = diff-so-fancy | peco
+  diff          = diff-so-fancy | peco
 [commit]
   template = /home/minamo/.commit_template
 [core]

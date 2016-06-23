@@ -2,7 +2,8 @@
 # vim: ft=sh
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/minamo/.oh-my-zsh
+export ZSH=/Users/fukada/.oh-my-zsh
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -108,9 +109,9 @@ alias cls='clear'
 alias ftp='ftp -in'
 alias grep='grep --color=auto '
 alias hstg='history | grep'
-alias la='ls -ahFX --color=auto'
-alias ll='ls -alhFX --color=auto'
-alias ls='ls -X --color=auto'
+alias la='ls -ahF'
+alias ll='ls -alhF'
+alias ls='ls'
 alias mytm='gnome-terminal --geometry=132x30 -e "byobu"'
 alias ps='ps -ax'
 alias psg='ps -ax | grep'
@@ -182,3 +183,4 @@ bindkey '^]' peco-src
 #-------------------------------------------------------------------------------
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
