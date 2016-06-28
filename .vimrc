@@ -4,7 +4,7 @@ scriptencoding utf-8
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 21-Apr-2016.
+" Last Change: 28-Jun-2016.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -243,20 +243,11 @@ endif
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/.vim/dein.vim
+set runtimepath^=/Users/fukada/.vim/dein.vim/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.vim/dein'))
+call dein#begin(expand('/Users/fukada/.vim/dein.vim'))
 
 call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/vimproc.vim', {
-    \ 'build': {
-    \     'windows': 'tools\\update-dll-mingw',
-    \     'cygwin': 'make -f make_cygwin.mak',
-    \     'mac': 'make -f make_mac.mak',
-    \     'linux': 'make',
-    \     'unix': 'gmake',
-    \    },
-    \ })
 
 call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neomru.vim')
@@ -269,7 +260,16 @@ call dein#add('flazz/vim-colorschemes')
 call dein#add('mileszs/ack.vim')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
+call dein#add('jeffreyiacono/vim-colors-wombat')
+
 call dein#end()
+
+filetype plugin indent on
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 "--------------------------------------------------
 " ローカルマシン設定
 set directory=~/.vim/swap
