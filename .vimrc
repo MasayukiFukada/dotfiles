@@ -264,6 +264,7 @@ call dein#add('Shougo/neosnippet')
 
 call dein#add('itchyny/lightline.vim')
 call dein#add('editorconfig/editorconfig-vim')
+call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
 call dein#end()
 "--------------------------------------------------
@@ -280,6 +281,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set expandtab
+set scrolloff=10
 
 set nowrapscan
 set clipboard+=unnamed

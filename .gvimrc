@@ -86,15 +86,15 @@ colorscheme wombat
 "   " UNIX用 (xfontsetを使用)
 "   set guifontset=a14,r14,k14
 " endif
-set guifont=CodeM\ 15
+set guifont=CodeM\ 12
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:
 "
 " ウインドウの幅
-set columns=130
+set columns=110
 " ウインドウの高さ
-set lines=30
+set lines=55
 " コマンドラインの高さ(GUI使用時)
 set cmdheight=2
 " 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
