@@ -41,4 +41,4 @@
   show          = diff-highlight | less
   diff          = diff-highlight | less
 [commit]
-  template = /home/minamo/.commit_template
+	template = /home/minamo/.commit_template
