@@ -4,12 +4,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/fukada/.oh-my-zsh
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="miloshadzic"
+ZSH_THEME="gnzh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -93,12 +95,18 @@ HISTFILE=~/.zsh_history
 
 #>>> 以下追加
 export EDITOR="vim"
-export LANG=ja_JP.UTF-8
+#export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 export XMODIFIERS=@im=uim
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+export GOROOT=/usr/local/bin
+export GOPATH=$HOME/.go
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
+export ANDROID_HOME=/Users/fukada/Library/Android/sdk/
 
 #OSによって存在しないコマンドはコメントアウトしている
 alias awk='gawk'
@@ -119,7 +127,6 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias t='tmux'
 alias tlg='~/Dropbox/Work/Perl/TimeEventLog.pl ~/Dropbox/Document/timelog.txt'
-alias whereis='whereis -b'
 alias dbox='~/.dropbox-dist/dropboxd &'
 #ファイル名付き
 alias lbfx='libreoffice ~/Dropbox/Document/SpreadSheet/life_MoneyFx.ods &'
@@ -184,3 +191,4 @@ bindkey '^]' peco-src
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+archey

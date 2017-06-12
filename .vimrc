@@ -255,12 +255,16 @@ call dein#add('Shougo/neosnippet')
 
 call dein#add('vimplugin/project.vim')
 call dein#add('itchyny/lightline.vim')
+call dein#add('vimplugin/project.vim')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('flazz/vim-colorschemes')
 call dein#add('mileszs/ack.vim')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
-call dein#add('jeffreyiacono/vim-colors-wombat')
+call dein#add('keith/swift.vim')
+call dein#add('flazz/vim-colorschemes')
+
+call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
 call dein#end()
 
@@ -286,15 +290,19 @@ set autoindent
 set expandtab
 set scrolloff=10
 
+set scrolloff=5
+
 set nowrapscan
-set clipboard+=unnamed
+set clipboard&
+set clipboard^=unnamed
 set guicursor=a:blinkon0
 set vb
 set t_vb=
 
-set colorcolumn=80
+set colorcolumn=80,100,120
 
 cab ccs colorscheme
+set background=dark
 
 let g:ackprg = 'ag --nocolor --column'
 
@@ -304,6 +312,8 @@ inoremap <C-j> <Nop>
 "--------------------------------------------------
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.scss setf css
+
+noremap Y y$
 
 " Copyright (C) 2009-2013 KaoriYa/MURAOKA Taro
 

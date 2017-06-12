@@ -55,10 +55,10 @@
   show          = diff-so-fancy | peco
   diff          = diff-so-fancy | peco
 [commit]
-  template = /home/minamo/.commit_template
+  template = /Users/fsuser/.commit_template
 [core]
   quotepath = false
 [webui]
   autoupdate = true
 [ghq]
-	root = ~/work/repository
+  root = ~/work/repository
