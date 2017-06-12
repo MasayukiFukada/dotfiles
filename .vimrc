@@ -264,6 +264,7 @@ call dein#add('Shougo/neosnippet')
 
 call dein#add('itchyny/lightline.vim')
 call dein#add('editorconfig/editorconfig-vim')
+call dein#add('vimplugin/project.vim')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
 call dein#end()

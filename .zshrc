@@ -56,24 +56,6 @@ plugins=(git)
 
 # User configuration
 
-path=(
-  $path
-  "/usr/local/heroku/bin"
-  "/home/minamo/.rvm/gems/ruby-2.2.3/bin"
-  "/home/minamo/.rvm/gems/ruby-2.2.3@global/bin"
-  "/home/minamo/.rvm/rubies/ruby-2.2.3/bin"
-  "/home/minamo/tools/go/go-lang/bin"
-  "/home/minamo/bin"
-  "/usr/local/sbin"
-  "/usr/local/bin"
-  "/usr/sbin"
-  "/usr/bin"
-  "/sbin"
-  "/bin"
-  "/usr/games"
-  "/usr/local/games"
-  "/home/minamo/.rvm/bin"
-)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -113,10 +95,6 @@ export EDITOR="vim"
 export LANG=ja_JP.UTF-8
 export XMODIFIERS=@im=uim
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/.go
-export GEM_HOME=$HOME/.gem
-export GEM_PATH=$HOME/.gem
 
 #OSによって存在しないコマンドはコメントアウトしている
 alias awk='gawk'
