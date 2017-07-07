@@ -8,7 +8,7 @@ export ZSH=/home/minamo/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sorin"
+ZSH_THEME="kphoen"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -103,7 +103,7 @@ alias chrome-s='google-chrome -disk-cache-dir=/tmp &'
 alias chrome='google-chrome -disk-cache-dir=/tmp &'
 alias cls='clear'
 alias ftp='ftp -in'
-alias grep='grep --color=auto -i '
+alias grep='grep --color=auto '
 alias hstg='history | grep'
 alias la='ls -ahFX --color=auto'
 alias ll='ls -alhFX --color=auto'
