@@ -6,6 +6,7 @@
   helper = store
 [alias]
   amend  = commit --amend
+  coders = shortlog -sne
   info   = status --short --branch
   update = pull --rebase origin
   press  = push --force-with-lease
@@ -37,7 +38,7 @@
   packSizeLimit = 20m
 [diff]
   tool = meld
-  compactionHeuristic = true
+  indentHeuristic = true
 [difftool "meld"]
   path = meld
   cmd = meld $LOCAL $REMOTE
