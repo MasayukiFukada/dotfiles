@@ -19,6 +19,8 @@
   meld   = difftool --dir-diff
 [pull]
   rebase        = true
+[color]
+  ui     = true
 [help]
   autocorrect   = 1
 [merge]
@@ -51,4 +53,6 @@
   show          = diff-highlight | less
   diff          = diff-highlight | less
 [commit]
-	template = /home/minamo/.commit_template
+  template = /home/minamo/.commit_template
+[core]
+  quotepath = false

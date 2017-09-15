@@ -270,6 +270,10 @@ call dein#add('MasayukiFukada/vimSeasonsColorPack')
 call dein#end()
 "--------------------------------------------------
 " ローカルマシン設定
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,default,latin
 set directory=~/.vim/swap
 set undofile
 set undodir=~/.vim/undo
