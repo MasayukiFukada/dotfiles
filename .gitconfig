@@ -49,9 +49,9 @@
 [mergetool "meld"]
   cmd = meld $LOCAL $BASE $REMOTE --auto-merge
 [pager]
-  log           = diff-highlight | less
-  show          = diff-highlight | less
-  diff          = diff-highlight | less
+  log           = diff-so-fancy | less --tabs=4
+  show          = diff-so-fancy | less --tabs=4
+  diff          = diff-so-fancy | less --tabs=4
 [commit]
   template = /home/minamo/.commit_template
 [core]

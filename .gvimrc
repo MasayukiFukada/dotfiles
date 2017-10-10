@@ -92,7 +92,7 @@ set guifont=CodeM\ 12
 " ウインドウに関する設定:
 "
 " ウインドウの幅
-set columns=110
+set columns=170
 " ウインドウの高さ
 set lines=55
 " コマンドラインの高さ(GUI使用時)
