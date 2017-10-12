@@ -13,6 +13,8 @@ set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
 
 # 横分割に強制する
 set vertical-split = yes
+set split-view-width = 90%
+set split-view-height = 90%
 
 # utf-8 文字で画面描画する (~でトグル)
 set line-graphics = utf-8

@@ -8,7 +8,7 @@
   amend  = commit --amend
   coders = shortlog -sne
   info   = status --short --branch
-  update = pull --rebase origin
+  update = pull --rebase
   press  = push --force-with-lease
   remove = rm --cached
   save   = commit --verbose
