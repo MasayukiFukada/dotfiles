@@ -12,5 +12,14 @@ Ubuntu環境について
         - `whereis` して tig の実行ファイルを検索。それぞれ実行してみる
         - ホームディレクトリの tig が正しく動くか確認する。  
           場合によっては削除して他の場所にある実行ファイルにリンクを張る
+* atom
+    - Community Package
+        - vim-mode-plus
+            - relative number
+        - minimap
+        - teletype
+        - file-icons
+        - editor-background
+        - editorconfig
 
 vim: ft=markdown
