@@ -17,11 +17,12 @@ path=(
   "/usr/local/sbin"
   "/usr/sbin"
   "/sbin"
+  "$HOME/.go/bin"
+  "$HOME/.cargo/bin"
   "/usr/games"
   "/usr/local/games"
 )
 
-export GOROOT=/usr/local/go
 export GOPATH=$HOME/.go
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
