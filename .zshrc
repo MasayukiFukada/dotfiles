@@ -93,12 +93,11 @@ HISTFILE=~/.zsh_history
 #>>> 以下追加
 export EDITOR="vim"
 export LANG=ja_JP.UTF-8
-export LC_CTYPE=ja_JP.UTF-8
+export XMODIFIERS=@im=uim
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
-export LESS="-R"
 
 #OSによって存在しないコマンドはコメントアウトしている
 alias awk='gawk'

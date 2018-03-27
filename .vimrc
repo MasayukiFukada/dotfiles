@@ -262,18 +262,15 @@ call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/neosnippet')
 
+call dein#add('vimplugin/project.vim')
 call dein#add('itchyny/lightline.vim')
 call dein#add('editorconfig/editorconfig-vim')
-call dein#add('vimplugin/project.vim')
+call dein#add('flazz/vim-colorschemes')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
 call dein#end()
 "--------------------------------------------------
 " ローカルマシン設定
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,default,latin
 set directory=~/.vim/swap
 set undofile
 set undodir=~/.vim/undo
@@ -299,6 +296,11 @@ set colorcolumn=80
 cab ccs colorscheme
 
 set runtimepath+=$GOPATH/src/github.com/golang/lint/misc/vim
+"--------------------------------------------------
+inoremap <C-j> <Nop>
+"--------------------------------------------------
+au BufNewFile,BufRead *.js setf javascript
+au BufNewFile,BufRead *.scss setf css
 
 " Copyright (C) 2009-2013 KaoriYa/MURAOKA Taro
 
