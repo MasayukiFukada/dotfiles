@@ -12,10 +12,10 @@
   "workbench.colorTheme": "Monokai Dimmed",
   "workbench.iconTheme": "vscode-icons",
   "indentRainbow.colors": [
-    "rgba(255,127,127,0.3)",
-    "rgba(255,127,255,0.3)",
-    "rgba(127,127,255,0.3)",
-    "rgba(127,191,255,0.3)"
+    "rgba(255,127,127,0.15)",
+    "rgba(255,127,255,0.15)",
+    "rgba(127,127,255,0.15)",
+    "rgba(127,191,255,0.15)"
   ],
   "indentRainbow.errorColor": "rgba(255,100,100,0.6)",
   "workbench.startupEditor": "newUntitledFile",
