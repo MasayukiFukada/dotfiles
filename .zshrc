@@ -159,3 +159,6 @@ setopt hist_ignore_space
 # ヒストリを呼び出してから実行する間に一旦編集可能
 setopt hist_verify
 
+if [ -f ~/.Xmodmap ]; then
+    xmodmap ~/.Xmodmap
+fi
