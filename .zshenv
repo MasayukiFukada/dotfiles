@@ -19,6 +19,7 @@ path=(
   "/sbin"
   "$HOME/.go/bin"
   "$HOME/.cargo/bin"
+  "$HOME/bin"
   "/usr/games"
   "/usr/local/games"
 )

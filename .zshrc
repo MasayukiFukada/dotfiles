@@ -159,6 +159,20 @@ setopt hist_ignore_space
 # ヒストリを呼び出してから実行する間に一旦編集可能
 setopt hist_verify
 
-if [ -f ~/.Xmodmap ]; then
+if [ -e ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
+
+# ghq and peco
+#-------------------------------------------------------------------------------
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
+#-------------------------------------------------------------------------------

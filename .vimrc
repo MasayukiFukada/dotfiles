@@ -266,6 +266,7 @@ call dein#add('vimplugin/project.vim')
 call dein#add('itchyny/lightline.vim')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('flazz/vim-colorschemes')
+call dein#add('mileszs/ack.vim')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
 call dein#end()
@@ -294,6 +295,8 @@ set t_vb=
 set colorcolumn=80
 
 cab ccs colorscheme
+
+let g:ackprg = 'ag --nocolor --column'
 
 set runtimepath+=$GOPATH/src/github.com/golang/lint/misc/vim
 "--------------------------------------------------
