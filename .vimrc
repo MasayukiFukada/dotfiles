@@ -146,7 +146,7 @@ set showmatch
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 " テキスト挿入中の自動折り返しを日本語に対応させる
-set formatoptions+=mM
+set formatoptions=q
 
 "---------------------------------------------------------------------------
 " GUI固有ではない画面表示の設定:
@@ -268,6 +268,7 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('flazz/vim-colorschemes')
 call dein#add('mileszs/ack.vim')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
+call dein#add("mileszs/ack.vim")
 
 call dein#end()
 "--------------------------------------------------
@@ -295,6 +296,7 @@ set t_vb=
 set colorcolumn=80
 
 cab ccs colorscheme
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:ackprg = 'ag --nocolor --column'
 

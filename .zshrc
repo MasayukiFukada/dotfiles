@@ -2,7 +2,7 @@
 # vim: ft=sh
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/minamo/.oh-my-zsh
+export ZSH=/home/fukada/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -95,6 +95,11 @@ export EDITOR="vim"
 export LANG=ja_JP.UTF-8
 export XMODIFIERS=@im=uim
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+export DefaultImModule='fcitx'
+export GTK_IM_MODULE='fcitx'
+export QT_IM_MODULE='fcitx'
+export XMODIFIERS='@im=fcitx'
+
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx

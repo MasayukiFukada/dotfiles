@@ -86,7 +86,7 @@ colorscheme silentash
 "   " UNIX用 (xfontsetを使用)
 "   set guifontset=a14,r14,k14
 " endif
-set guifont=CodeM\ 12
+set guifont=CodeM\ 14
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:
@@ -94,7 +94,7 @@ set guifont=CodeM\ 12
 " ウインドウの幅
 set columns=170
 " ウインドウの高さ
-set lines=55
+set lines=35
 " コマンドラインの高さ(GUI使用時)
 set cmdheight=2
 " 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
