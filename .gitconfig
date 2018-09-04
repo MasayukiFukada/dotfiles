@@ -53,7 +53,7 @@
   show          = diff-so-fancy | less --tabs=4
   diff          = diff-so-fancy | less --tabs=4
 [commit]
-  template = /home/minamo/.commit_template
+  template = /home/fukada/.commit_template
 [core]
   quotepath = false
 [webui]

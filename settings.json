@@ -9,8 +9,7 @@
     120
   ],
   "editor.renderWhitespace": "boundary",
-  "workbench.colorTheme": "Monokai Dimmed",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Noctis Lux",
   "indentRainbow.colors": [
     "rgba(255,127,127,0.15)",
     "rgba(255,127,255,0.15)",
