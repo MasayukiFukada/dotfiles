@@ -1,15 +1,10 @@
 # vim: ft=sh
-export PYENV_ROOT=/usr/local/.pyenv
-export RBENV_ROOT=/usr/local/.rbenv
 
 export ANDROID_HOME=/home/minamo/Android/Sdk
 
 typeset -U path PATH
 path=(
-  "$PYENV_ROOT/bin"
-  "$PYENV_ROOT/shims"
-  "$RBENV_ROOT/bin"
-  "$RBENV_ROOT/shims"
+  "$HOME/.anyenv/bin"
   "/usr/local/go/bin"
   "$ANDROID_HOME/tools"
   "$ANDROID_HOME/platform-tools"
@@ -22,6 +17,7 @@ path=(
   "$HOME/bin"
   "/usr/games"
   "/usr/local/games"
+  "$HOME/work/tool-repository/stlink/build/Release/_install/usr/local/bin"
 )
 
 export GOPATH=$HOME/.go

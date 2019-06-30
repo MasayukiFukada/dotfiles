@@ -163,6 +163,10 @@ if [ -e ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
 
+# anyenv
+#-------------------------------------------------------------------------------
+eval "$(anyenv init -)"
+
 # ghq and peco
 #-------------------------------------------------------------------------------
 function peco-src () {
@@ -176,3 +180,5 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 #-------------------------------------------------------------------------------
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
