@@ -280,6 +280,7 @@ set directory=~/.vim/swap
 set undofile
 set undodir=~/.vim/undo
 set backupdir=~/.vim/bkup
+set backupskip=/tmp/*,/private/tmp/*
 
 set relativenumber
 set number

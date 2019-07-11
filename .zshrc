@@ -3,15 +3,17 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/fukada/.oh-my-zsh
-export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight:$HOME/.go/bin
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
+export PATH=~/bin/FDK/Tools/osx:$PATH
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="kphoen"
+#ZSH_THEME="michelebologna"
+ZSH_THEME="michelebologna"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -95,8 +97,8 @@ HISTFILE=~/.zsh_history
 
 #>>> 以下追加
 export EDITOR="vim"
-#export LANG=ja_JP.UTF-8
-export LANG=en_US.UTF-8
+export LANG=ja_JP.UTF-8
+#export LANG=en_US.UTF-8
 export XMODIFIERS=@im=uim
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export GTK_IM_MODULE=fcitx
@@ -187,8 +189,7 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
-#-------------------------------------------------------------------------------
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 archey
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

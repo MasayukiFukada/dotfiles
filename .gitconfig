@@ -1,7 +1,8 @@
 [user]
   name   = fukada
 [user]
-  email  = fukada.531@fssoftware.co.jp
+  email      = fukada.531@fssoftware.co.jp
+  signingkey = EF42D1F9835597C1AB30F5B07B3110CC039A03DC
 [credential]
   helper = store
 [alias]
@@ -58,6 +59,7 @@
   template = /Users/fsuser/.commit_template
 [core]
   quotepath = false
+  excludesfile = /Users/fukada/.gitignore_global
 [webui]
   autoupdate = true
 [ghq]
