@@ -1,6 +1,3 @@
-[user]
-  name   = fukada
-  email  = fukada.531@fssoftware.co.jp
 [credential]
   helper = store
 [alias]
@@ -59,4 +56,10 @@
 [webui]
   autoupdate = true
 [ghq]
-	root = ~/work/repository
+  root = ~/work/repository
+  root = ~/.go/src/fssoftware.co.jp
+  root = /media/sf_shareWithVirtualBox/
+[includeIf "gitdir:/media/sf_shareWithVirtualBox/Winas/**"]
+  path   = /home/fukada/.gitconfig_winas
+[includeIf "gitdir:/home/fukada/work/repository/**"]
+  path   = /home/fukada/.gitconfig_work

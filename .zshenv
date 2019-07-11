@@ -1,10 +1,13 @@
 # vim: ft=sh
-export PYENV_ROOT=/usr/local/.pyenv
-export RBENV_ROOT=/usr/local/.rbenv
+export PYENV_ROOT=$HOME/.anyenv/envs/pyenv
+export RBENV_ROOT=$HOME/.anyenv/envs/rbenv
 
 export ANDROID_HOME=/home/minamo/Android/Sdk
-
 export ANDROID_HOME=$HOME/Android/
+
+export GOPATH=$HOME/.go
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
 
 typeset -U path PATH
 path=(
@@ -15,6 +18,7 @@ path=(
   "$HOME/bin"
   "$PYENV_ROOT/bin"
   "$PYENV_ROOT/shims"
+  "$GEM_HOME/bin"
   "$RBENV_ROOT/bin"
   "$RBENV_ROOT/shims"
   "/sbin"
@@ -25,10 +29,6 @@ path=(
   "/usr/sbin"
   $path
 )
-
-export GOPATH=$HOME/.go
-export GEM_HOME=$HOME/.gem
-export GEM_PATH=$HOME/.gem
 
 bindkey -v
 

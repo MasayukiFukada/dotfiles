@@ -65,11 +65,11 @@ bind generic S      ?git stash save "%(prompt Enter stash comment: )"
 bind stash   Y      ?git stash pop %(stash)
 
 # リセット(soft)
-bind generic ^      ?git reset --soft HEAD^
+# bind generic ^      ?git reset --soft HEAD^
 # リセット(hard)
-bind main    H      ?git reset --hard %(commit)
-bind diff    H      ?git reset --hard %(commit)
-bind status  H      ?git reset --hard HEAD
+# bind main    H      ?git reset --hard %(commit)
+# bind diff    H      ?git reset --hard %(commit)
+# bind status  H      ?git reset --hard HEAD
 
 # D でブランチを削除 (マージ済みブランチのみ. 強制削除(branch -D) は `!`) (refs-view)
 bind refs    D      ?git branch -d %(branch)

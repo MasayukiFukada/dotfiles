@@ -86,7 +86,8 @@ colorscheme silentash
 "   " UNIX用 (xfontsetを使用)
 "   set guifontset=a14,r14,k14
 " endif
-set guifont=CodeM\ 14
+"set guifont=CodeM\ 14
+set guifont=Cica\ 14
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:

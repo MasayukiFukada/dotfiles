@@ -285,7 +285,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set expandtab
-set scrolloff=10
+set scrolloff=0
 
 set nowrapscan
 set clipboard+=unnamed
@@ -303,6 +303,14 @@ let g:ackprg = 'ag --nocolor --column'
 set runtimepath+=$GOPATH/src/github.com/golang/lint/misc/vim
 "--------------------------------------------------
 inoremap <C-j> <Nop>
+
+let mapleader = "\<Space>"
+nnoremap <Leader>e :e .<CR>
+nnoremap <Leader>l :ls .<CR>
+nnoremap <Leader>q :qa!<CR>
+nnoremap <leader>r :source ~/.vimrc<cr>
+nnoremap <leader>t :sh<cr>
+nnoremap <leader>w :w<cr>
 "--------------------------------------------------
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.scss setf css

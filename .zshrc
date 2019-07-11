@@ -8,7 +8,7 @@ export ZSH=/home/fukada/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="miloshadzic"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -100,6 +100,9 @@ export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 
+export DICTIONARY=en_US
+export WORDLIST=$HOME/.hunspell_personal_dictionary
+
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
@@ -180,4 +183,12 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+#-------------------------------------------------------------------------------
+# anyenv
+#-------------------------------------------------------------------------------
+if [ -d $HOME/.anyenv ]
+then
+    export PATH="$HOME/.anyenv/bin:$PATH"
+    eval "$(anyenv init -)"
+fi
 #-------------------------------------------------------------------------------

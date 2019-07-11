@@ -1,15 +1,16 @@
 {
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/bin/nvim",
-  "editor.fontSize": 18,
-  "editor.fontFamily": "'CodeM'",
-  "editor.rulers": [
-    80,
-    100,
-    120
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["ctrl+["],
+      "after": ["<Esc>"]
+    }
   ],
+  "editor.fontSize": 18,
+  "editor.fontFamily": "\"Monego\", \"Utatane\"",
+  "editor.rulers": [80, 100, 120],
   "editor.renderWhitespace": "boundary",
-  "workbench.colorTheme": "Noctis Lux",
   "indentRainbow.colors": [
     "rgba(255,127,127,0.15)",
     "rgba(255,127,255,0.15)",
@@ -24,20 +25,159 @@
   },
   "markdownlint.config": {
     "default": true,
-    "MD007": {"indent": 4},
+    "MD007": {
+      "indent": 2
+    },
     "MD009": false
   },
   "python.linting.enabled": true,
   "python.pythonPath": "/usr/bin/python3",
   "python.linting.pylintPath": "/usr/local/bin/pylint",
-  "python.unitTest.unittestEnabled": true,
-  "python.unitTest.unittestArgs": [
-    "-v",
-    "-s",
-    "./tests",
-    "*test*.py"
-  ],
+  "python.testing.unittestEnabled": true,
+  "python.testing.unittestArgs": ["-v", "-s", "./tests", "*test*.py"],
   "plantuml.exportFormat": "png",
-  "plantuml.exportOutDirName": "image",
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "terminal.integrated.rendererType": "dom",
+  "breadcrumbs.enabled": true,
+  "window.titleBarStyle": "custom",
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.go"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/vendor/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "color": "#0000ff",
+      "backgroundColor": "#ddddff",
+      "overviewRulerColor": "#ddddff",
+      "isWholeLine": true
+    },
+    {
+      "text": "DEBUG:",
+      "color": "#ffffff",
+      "backgroundColor": "#555555",
+      "overviewRulerColor": "#555555",
+      "isWholeLine": true
+    },
+    {
+      "text": "NOTE:",
+      "color": "#00aa00",
+      "backgroundColor": "#ddffdd",
+      "isWholeLine": false
+    },
+    {
+      "text": "FIXME:",
+      "color": "#ffffff",
+      "backgroundColor": "#ff99cb",
+      "overviewRulerColor": "#ff99cb",
+      "isWholeLine": true
+    },
+    {
+      "text": "HACK:",
+      "color": "#ff00ff",
+      "backgroundColor": "#ccbbff",
+      "overviewRulerColor": "#ccbbff",
+      "isWholeLine": true
+    }
+  ],
+  "powermode.enabled": true,
+  "powermode.enableShake": false,
+  "powermode.presets": "fireworks",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.visible": true,
+  "asciidoc.preview.fontFamily": "'Utatane'",
+  "markdown.preview.fontFamily": "'Utatane'",
+  "debug.console.fontFamily": "'Utatane'",
+  "terminal.integrated.fontFamily": "Cica",
+  "liveshare.featureSet": "insiders",
+  "cSpell.enabledLanguageIds": [
+    "Log",
+    "asciidoc",
+    "bat",
+    "c",
+    "clojure",
+    "coffeescript",
+    "cpp",
+    "csharp",
+    "css",
+    "csv",
+    "dart",
+    "diff",
+    "dockerfile",
+    "elm",
+    "git-commit",
+    "go",
+    "groovy",
+    "handlebars",
+    "html",
+    "ignore",
+    "ini",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "kotlin",
+    "latex",
+    "less",
+    "log",
+    "lua",
+    "makefile",
+    "markdown",
+    "objective-c",
+    "objective-cpp",
+    "perl",
+    "perl6",
+    "php",
+    "plaintext",
+    "powershell",
+    "pug",
+    "python",
+    "r",
+    "restructuredtext",
+    "ruby",
+    "rust",
+    "scala",
+    "scss",
+    "shellscript",
+    "sql",
+    "swift",
+    "text",
+    "todo",
+    "toml",
+    "typescript",
+    "typescriptreact",
+    "xml",
+    "xsl",
+    "yaml",
+    "yml"
+  ],
+  "sync.gist": "df111e7a06effa548f3a2162accd0374",
+  "workbench.colorTheme": "SynthWave '84",
+  "vscode_custom_css.imports": [
+    "file:///home/fukada/synthwave84.css"
+  ],
+  "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
+  "cSpell.userWords": ["plantuml"]
 }
