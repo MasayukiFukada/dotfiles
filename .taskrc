@@ -32,6 +32,6 @@ include /usr/share/taskwarrior/dark-16.theme
 # Custom
 editor=vim
 calendar.holidays=full
-include /home/fukada/holidays.jp-JP.rc
+include /home/fukada/holidays.ja-JP.rc
 context.work=+Work
 context.life=+Life
