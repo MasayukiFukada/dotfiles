@@ -131,6 +131,8 @@ alias dbox='~/.dropbox-dist/dropboxd &'
 #ファイル名付き
 alias lbfx='libreoffice ~/Dropbox/Document/SpreadSheet/life_MoneyFx.ods &'
 alias tmelg='~/Dropbox/Work/Perl/TimeEventLog.pl ~/Dropbox/Document/timelog.txt'
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
 
 # 先頭がスペースならヒストリーに追加しない。
 setopt hist_ignore_space
