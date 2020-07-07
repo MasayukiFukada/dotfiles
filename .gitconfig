@@ -52,9 +52,9 @@
 [mergetool "meld"]
   cmd = meld $LOCAL $BASE $REMOTE --auto-merge
 [pager]
-  log           = diff-so-fancy | peco
-  show          = diff-so-fancy | peco
-  diff          = diff-so-fancy | peco
+  log           = diff-so-fancy | less --tabs=4
+  show          = diff-so-fancy | less --tabs=4
+  diff          = diff-so-fancy | less --tabs=4
 [commit]
   template = /Users/fsuser/.commit_template
 [core]
