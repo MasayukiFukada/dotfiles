@@ -113,10 +113,7 @@ if 1 && (!exists('g:no_vimrc_example') || g:no_vimrc_example == 0)
     " まれる.vimrcでencが設定された場合にその設定が反映されずメニューが文字
     " 化けてしまう。
     set guioptions+=M
-    source $VIMRUNTIME/vimrc_example.vim
     set guioptions-=M
-  else
-    source $VIMRUNTIME/vimrc_example.vim
   endif
 endif
 
@@ -169,6 +166,12 @@ set cmdheight=2
 set showcmd
 " タイトルを表示
 set title
+" インクリメンタルサーチ
+set incsearch
+" ハイライトサーチ
+set hlsearch
+" シンタックスハイライト
+syntax on
 " 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
 "colorscheme evening " (Windows用gvim使用時はgvimrcを編集すること)
 
@@ -262,20 +265,35 @@ call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/neosnippet')
 
+call dein#add('andys8/vim-elm-syntax')
+
 call dein#add('vimplugin/project.vim')
 call dein#add('itchyny/lightline.vim')
 call dein#add('editorconfig/editorconfig-vim')
-call dein#add('flazz/vim-colorschemes')
 call dein#add('mileszs/ack.vim')
+call dein#add('flazz/vim-colorschemes')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
 
+call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+
 call dein#end()
+
+call map(dein#check_clean(), "delete(v:val, 'rf')")
+
+filetype plugin indent on
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 "--------------------------------------------------
 " ローカルマシン設定
 set directory=~/.vim/swap
 set undofile
 set undodir=~/.vim/undo
 set backupdir=~/.vim/bkup
+set backupskip=/tmp/*,/private/tmp/*
 
 set relativenumber
 set number
@@ -301,9 +319,36 @@ let g:ackprg = 'ag --nocolor --column'
 set runtimepath+=$GOPATH/src/github.com/golang/lint/misc/vim
 "--------------------------------------------------
 inoremap <C-j> <Nop>
+
+let mapleader = ","
+nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>c :source ~/.vimrc<cr>
+nnoremap <leader>e :e .<cr>
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>g :GFiles<cr>
+nnoremap <leader>G :GFiles?<cr>
+nnoremap <leader>h :History<cr>
+nnoremap <leader>l :ls .<cr>
+nnoremap <leader>m :Marks<cr>
+nnoremap <leader>n :cn<cr>
+nnoremap <leader>N :cN<cr>
+nnoremap <leader>r :Rg<cr>
+nnoremap <leader>t :sh<cr>
+nnoremap <leader>w :w<cr>
+
+noremap Y y$
 "--------------------------------------------------
 au BufNewFile,BufRead *.js setf javascript
 au BufNewFile,BufRead *.scss setf css
+
+" :Rg command (require ripgrep)
+if executable('rg')
+    command! -bang -nargs=* Rg
+        \ call fzf#vim#grep(
+        \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
+        \   fzf#vim#with_preview({'options': '--exact --reverse --delimiter : --nth 3..'}, 'up:50%:wrap'))
+endif
+
 
 " Copyright (C) 2009-2013 KaoriYa/MURAOKA Taro
 

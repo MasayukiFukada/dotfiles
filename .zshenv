@@ -4,7 +4,7 @@ export ANDROID_HOME=/home/minamo/Android/Sdk
 
 typeset -U path PATH
 path=(
-  "$HOME/.anyenv/bin"
+  "/opt/anyenv/bin"
   "/usr/local/go/bin"
   "$ANDROID_HOME/tools"
   "$ANDROID_HOME/platform-tools"

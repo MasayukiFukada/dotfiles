@@ -1,114 +1,33 @@
 {
-  "vim.enableNeovim": true,
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["ctrl+["],
-      "after": ["<Esc>"]
-    }
-  ],
-  "editor.fontSize": 18,
-  "editor.fontFamily": "\"Monego\", \"Utatane\"",
-  "editor.rulers": [80, 100, 120],
-  "editor.renderWhitespace": "boundary",
-  "indentRainbow.colors": [
-    "rgba(255,127,127,0.15)",
-    "rgba(255,127,255,0.15)",
-    "rgba(127,127,255,0.15)",
-    "rgba(127,191,255,0.15)"
-  ],
-  "indentRainbow.errorColor": "rgba(255,100,100,0.6)",
-  "workbench.startupEditor": "newUntitledFile",
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, BreakBeforeBraces: Attach, SpaceBeforeParens: Never, IndentWidth: 4 }",
+  "C_Cpp.updateChannel": "Insiders",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[markdown]": {
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": true,
+    "editor.wordWrap": "on"
   },
-  "markdownlint.config": {
-    "default": true,
-    "MD007": {
-      "indent": 2
-    },
-    "MD009": false
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
   },
-  "python.linting.enabled": true,
-  "python.pythonPath": "/usr/bin/python3",
-  "python.linting.pylintPath": "/usr/local/bin/pylint",
-  "python.testing.unittestEnabled": true,
-  "python.testing.unittestArgs": ["-v", "-s", "./tests", "*test*.py"],
-  "plantuml.exportFormat": "png",
-  "window.zoomLevel": 0,
-  "terminal.integrated.rendererType": "dom",
-  "breadcrumbs.enabled": true,
-  "window.titleBarStyle": "custom",
-  "todohighlight.include": [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.html",
-    "**/*.php",
-    "**/*.css",
-    "**/*.scss",
-    "**/*.go"
-  ],
-  "todohighlight.exclude": [
-    "**/node_modules/**",
-    "**/bower_components/**",
-    "**/dist/**",
-    "**/vendor/**",
-    "**/build/**",
-    "**/.vscode/**",
-    "**/.github/**",
-    "**/_output/**",
-    "**/*.min.*",
-    "**/*.map",
-    "**/.next/**"
-  ],
-  "todohighlight.keywords": [
-    {
-      "text": "TODO:",
-      "color": "#0000ff",
-      "backgroundColor": "#ddddff",
-      "overviewRulerColor": "#ddddff",
-      "isWholeLine": true
-    },
-    {
-      "text": "DEBUG:",
-      "color": "#ffffff",
-      "backgroundColor": "#555555",
-      "overviewRulerColor": "#555555",
-      "isWholeLine": true
-    },
-    {
-      "text": "NOTE:",
-      "color": "#00aa00",
-      "backgroundColor": "#ddffdd",
-      "isWholeLine": false
-    },
-    {
-      "text": "FIXME:",
-      "color": "#ffffff",
-      "backgroundColor": "#ff99cb",
-      "overviewRulerColor": "#ff99cb",
-      "isWholeLine": true
-    },
-    {
-      "text": "HACK:",
-      "color": "#ff00ff",
-      "backgroundColor": "#ccbbff",
-      "overviewRulerColor": "#ccbbff",
-      "isWholeLine": true
-    }
-  ],
-  "powermode.enabled": true,
-  "powermode.enableShake": false,
-  "powermode.presets": "fireworks",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.activityBar.visible": true,
+  "[twig]": {
+    "editor.defaultFormatter": "mblode.twig-language-2"
+  },
   "asciidoc.preview.fontFamily": "'Utatane'",
-  "markdown.preview.fontFamily": "'Utatane'",
-  "debug.console.fontFamily": "'Utatane'",
-  "liveshare.featureSet": "insiders",
+  "breadcrumbs.enabled": true,
   "cSpell.enabledLanguageIds": [
     "Log",
     "asciidoc",
@@ -172,16 +91,199 @@
     "yaml",
     "yml"
   ],
-  "sync.gist": "df111e7a06effa548f3a2162accd0374",
-  "workbench.colorTheme": "SynthWave '84",
-  "vscode_custom_css.imports": [
-    "file:///Users/fsuser/synthwave84.css"
+  "cSpell.ignoreRegExpList": [
+    "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
   ],
-  "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
+  "calva.prettyPrintingOptions": {
+    "enabled": false,
+    "printEngine": "pprint",
+    "width": 120
+  },
+  "files.associations": {
+    "*.html": "twig"
+  },
+  "emmet.includeLanguages": {
+    "twig": "html"
+  },
+  "dart.openDevTools": "flutter",
+  "debug.console.fontFamily": "'Utatane'",
+  "editor.fontFamily": "\"CodeM\", \"Utatane\"",
+  "editor.fontSize": 18,
+  "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
-  "terminal.integrated.fontSize": 18,
-  "terminal.integrated.fontFamily": "CodeMForPowerline-Regular",
-  "sync.forceUpload": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80,
+    100,
+    120
+  ],
+  "hediet.vscode-drawio.local-storage": {
+    ".drawio-config": {
+      "autosave": true,
+      "createTarget": false,
+      "customFonts": [],
+      "customLibraries": [
+        "L.scratchpad"
+      ],
+      "darkGridColor": "#6e6e6e",
+      "formatWidth": 0,
+      "gridColor": "#d0d0d0",
+      "isRulerOn": false,
+      "language": "",
+      "libraries": "general;uml;er;bpmn;flowchart;basic;arrows2",
+      "openCounter": 0,
+      "pageFormat": {
+        "height": 1169,
+        "width": 827,
+        "x": 0,
+        "y": 0
+      },
+      "plugins": [],
+      "recentColors": [],
+      "resizeImages": null,
+      "search": true,
+      "showStartScreen": true,
+      "ui": "",
+      "unit": 1,
+      "version": 18
+    }
+  },
+  "indentRainbow.colors": [
+    "rgba(255,127,127,0.15)",
+    "rgba(255,127,255,0.15)",
+    "rgba(127,127,255,0.15)",
+    "rgba(127,191,255,0.15)"
+  ],
+  "indentRainbow.errorColor": "rgba(255,100,100,0.6)",
+  "liveshare.featureSet": "insiders",
+  "markdown.preview.fontFamily": "'Utatane'",
+  "markdownlint.config": {
+    "MD007": {
+      "indent": 2
+    },
+    "MD009": false,
+    "default": true
+  },
+  "plantuml.exportFormat": "png",
+  "powermode.enableShake": false,
+  "powermode.enabled": true,
+  "powermode.presets": "fireworks",
+  "python.linting.enabled": true,
+  "python.linting.pylintPath": "/usr/local/bin/pylint",
+  "python.pythonPath": "/usr/bin/python3",
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./tests",
+    "*test*.py"
+  ],
+  "python.testing.unittestEnabled": true,
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    }
+  },
   "sync.autoDownload": true,
-  "sync.autoUpload": true
+  "sync.autoUpload": true,
+  "sync.forceUpload": true,
+  "sync.gist": "df111e7a06effa548f3a2162accd0374",
+  "terminal.integrated.fontFamily": "CodeMForPowerline-Regular",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.rendererType": "dom",
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/vendor/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.go"
+  ],
+  "todohighlight.keywords": [
+    {
+      "backgroundColor": "#ddddff",
+      "color": "#0000ff",
+      "isWholeLine": true,
+      "overviewRulerColor": "#ddddff",
+      "text": "TODO:"
+    },
+    {
+      "backgroundColor": "#555555",
+      "color": "#ffffff",
+      "isWholeLine": true,
+      "overviewRulerColor": "#555555",
+      "text": "DEBUG:"
+    },
+    {
+      "backgroundColor": "#ddffdd",
+      "color": "#00aa00",
+      "isWholeLine": false,
+      "text": "NOTE:"
+    },
+    {
+      "backgroundColor": "#ff99cb",
+      "color": "#ffffff",
+      "isWholeLine": true,
+      "overviewRulerColor": "#ff99cb",
+      "text": "FIXME:"
+    },
+    {
+      "backgroundColor": "#ccbbff",
+      "color": "#ff00ff",
+      "isWholeLine": true,
+      "overviewRulerColor": "#ccbbff",
+      "text": "HACK:"
+    }
+  ],
+  "vim.enableNeovim": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "ctrl+["
+      ]
+    }
+  ],
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vscode_custom_css.imports": [
+    "file:///Users/fsuser/synthwave84.css",
+    "/Users/fsuser/.vscode/extensions/webrender.synthwave-x-fluoromachine-0.0.2/synthwave-x-fluoromachine.css"
+  ],
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#00FF00"
+  },
+  "workbench.colorTheme": "Winter is Coming (Dark Black - No Italics)",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "twig-language-2.braceLine": true,
+  "twig-language-2.bracePadding": true,
+  "twig-language-2.braces": true,
+  "twig-language-2.indentStyle": "space",
+  "twig-language-2.endComma": "always",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
 }

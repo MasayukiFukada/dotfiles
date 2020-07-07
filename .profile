@@ -21,7 +21,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Utility
 dropbox start &
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # Xmober
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 10 --transparent true --tint 0x191970 --height 20 &
