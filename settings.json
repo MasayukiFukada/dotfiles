@@ -117,37 +117,7 @@
     100,
     120
   ],
-  "hediet.vscode-drawio.local-storage": {
-    ".drawio-config": {
-      "autosave": true,
-      "createTarget": false,
-      "customFonts": [],
-      "customLibraries": [
-        "L.scratchpad"
-      ],
-      "darkGridColor": "#6e6e6e",
-      "formatWidth": 0,
-      "gridColor": "#d0d0d0",
-      "isRulerOn": false,
-      "language": "",
-      "libraries": "general;uml;er;bpmn;flowchart;basic;arrows2",
-      "openCounter": 0,
-      "pageFormat": {
-        "height": 1169,
-        "width": 827,
-        "x": 0,
-        "y": 0
-      },
-      "plugins": [],
-      "recentColors": [],
-      "resizeImages": null,
-      "search": true,
-      "showStartScreen": true,
-      "ui": "",
-      "unit": 1,
-      "version": 18
-    }
-  },
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImF1dG9zYXZlXCI6dHJ1ZSxcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwiY3VzdG9tRm9udHNcIjpbXSxcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImZvcm1hdFdpZHRoXCI6MCxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJsYW5ndWFnZVwiOlwiXCIsXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcIm9wZW5Db3VudGVyXCI6MCxcInBhZ2VGb3JtYXRcIjp7XCJoZWlnaHRcIjoxMTY5LFwid2lkdGhcIjo4MjcsXCJ4XCI6MCxcInlcIjowfSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcInNlYXJjaFwiOnRydWUsXCJzaG93U3RhcnRTY3JlZW5cIjp0cnVlLFwidWlcIjpcIlwiLFwidW5pdFwiOjEsXCJ2ZXJzaW9uXCI6MTh9In0=",
   "indentRainbow.colors": [
     "rgba(255,127,127,0.15)",
     "rgba(255,127,255,0.15)",

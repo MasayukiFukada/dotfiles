@@ -302,7 +302,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set expandtab
-set scrolloff=10
+set scrolloff=0
 
 set nowrapscan
 set clipboard+=unnamed
