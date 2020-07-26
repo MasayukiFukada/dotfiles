@@ -1,5 +1,6 @@
 import XMonad
-import System.IO 
+import XMonad.Hooks.DynamicLog
+import System.IO
 
 import XMonad.Layout
 import XMonad.Layout.DragPane          -- see only two window
@@ -28,12 +29,39 @@ myLayout = spacing 10 $ gaps [(U, 5),(D, 5),(L, 5),(R, 5)]
            $ (ResizableTall 1 (1/204) (119/204) [])
 
 main = do
-    xmproc <- spawnPipe "xmobar"
-    xmonad $ defaultConfig
+    xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
+
+myBar = "xmobar"
+
+-- Color Setting
+colorBlue      = "#868bae"
+colorGreen     = "#00d700"
+colorRed       = "#ff005f"
+colorGray      = "#666666"
+colorWhite     = "#bdbdbd"
+colorNormalbg  = "#1c1c1c"
+colorfg        = "#a8b6b8"
+
+myPP = xmobarPP { ppOrder = \(ws:l:t:_)  -> [ws,t]
+, ppCurrent = xmobarColor colorRed     colorNormalbg . \s -> "●"
+, ppUrgent = xmobarColor colorGray    colorNormalbg . \s -> "●"
+, ppVisible = xmobarColor colorRed     colorNormalbg . \s -> "⦿"
+, ppHidden = xmobarColor colorGray    colorNormalbg . \s -> "●"
+, ppHiddenNoWindows = xmobarColor colorGray    colorNormalbg . \s -> "○"
+, ppTitle = xmobarColor colorRed     colorNormalbg
+, ppOutput = putStrLn
+, ppWsSep = " "
+, ppSep = "  "
+}
+
+toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
+
+myConfig = defaultConfig
         { terminal = "tilix"
         , modMask = mod4Mask
-        , borderWidth = 3
+        , borderWidth = 1
         , focusFollowsMouse = False
+        , focusedBorderColor = "#00ff00"
         , layoutHook = myLayout
         ||| Mirror myLayout
         ||| reflectVert (Mirror myLayout)

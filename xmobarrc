@@ -1,0 +1,46 @@
+-- ~/.xmobarrc
+
+Config
+{ font = "xft:Code M:size=13"
+, bgColor = "#1c1c1c"
+, fgColor = "#404040"
+, position = Bottom
+, lowerOnStart = True
+, hideOnStart = False
+, allDesktops = True
+, overrideRedirect = False
+, border = BottomBM 0
+, borderColor = "#4e4e4e"
+, commands =
+  [ Run MultiCpu
+    [ "-t", "<fc=#ffffff>■ CPU:</fc> <total0>|<total1>|<total2>|<total3>|<total4>|<total5>|<total6>|<total7> <fc=#ffffff>%</fc> "
+    , "-L", "40" -- 低の境界
+    , "-H", "85" -- 高の境界
+    , "-l", "#ffffff"
+    , "-n", "#c3d825" -- 若草色
+    , "-h", "#d7003a" -- 紅
+    ] 10
+  , Run CoreTemp
+    [ "-t", "<fc=#ffffff>Temp:</fc> <core1>|<core2>|<core3>|<core4>|<core5>|<core6>|<core7>|<core8> <fc=#ffffff>C</fc> "
+    , "-L", "40"
+    , "-H", "60"
+    , "-l", "#ffffff"
+    , "-n", "#c3d825"
+    , "-h", "#d7003a"
+    ] 50
+  , Run Memory
+    [ "-t", "<fc=#ffffff>□ Mem</fc> <usedratio><fc=#ffffff> %</fc> "
+    , "-L", "40"
+    , "-H", "90"
+    , "-l", "#ffffff"
+    , "-n", "#c3d825"
+    , "-h", "#d7003a"
+    ] 10
+  , Run Date "<fc=#ffffff> [%a] %Y/%m/%d %H:%M</fc>" "date" 10
+  , Run StdinReader
+  , Run Locks
+  ]
+, sepChar = "%"
+, alignSep = "}{"
+, template = " %StdinReader% }{ %coretemp%%multicpu%%memory%%locks%%date% "
+}
