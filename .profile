@@ -28,5 +28,5 @@ dropbox start &
 # Xmober
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 10 --transparent true --tint 0x191970 --height 20 &
 
-feh --bg-scale /home/minamo/Pictures/wall_002.jpg
-/home/minamo/bin/compton_run.sh
+feh --bg-scale $HOME/Pictures/wall_002.jpg
+$HOME/bin/compton_run.sh

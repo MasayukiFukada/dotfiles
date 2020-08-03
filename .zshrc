@@ -1,7 +1,30 @@
 # Set up the prompt
 # vim: ft=sh
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+typeset -gU path PATH
+path=(
+  "$HOME/.anyenv/bin"
+  $PATH
+  "$HOME/.yarn/bin"
+  "$HOME/.config/yarn/global/node_modules/.bin"
+  "/usr/local/go/bin"
+  "/usr/local/sbin"
+  "/usr/sbin"
+  "/sbin"
+  "$HOME/.go/bin"
+  "$HOME/.cargo/bin"
+  "$HOME/bin"
+  "/usr/games"
+  "/usr/local/games"
+  "$HOME/work/tool-repository/stlink/build/Release/_install/usr/local/bin"
+)
+
+export GOPATH=$HOME/.go
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
+
+bindkey -v
+
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=200
 SAVEHIST=200
@@ -10,10 +33,10 @@ HISTFILE=~/.zsh_history
 #>>> 以下追加
 export EDITOR="vim"
 export LANG=ja_JP.UTF-8
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+#export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+#export GTK_IM_MODULE=fcitx
+#export QT_IM_MODULE=fcitx
+#export XMODIFIERS=@im=fcitx
 
 #OSによって存在しないコマンドはコメントアウトしている
 alias awk='gawk'
@@ -133,9 +156,10 @@ alias fv=vim-fzf-find
 # コマンドプロンプトにシステム情報を OS のロゴ付きで表示する
 # archey
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 #
 # Starship
 #
 eval "$(starship init zsh)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

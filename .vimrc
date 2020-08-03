@@ -246,38 +246,49 @@ endif
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/.vim/dein.vim
 
-call dein#begin(expand('~/.vim/dein'))
+let s:dein_dir = expand('~/.vim/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
 
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/vimproc.vim', {
-    \ 'build': {
-    \     'windows': 'tools\\update-dll-mingw',
-    \     'cygwin': 'make -f make_cygwin.mak',
-    \     'mac': 'make -f make_mac.mak',
-    \     'linux': 'make',
-    \     'unix': 'gmake',
-    \    },
-    \ })
-
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/neosnippet')
-
-call dein#add('andys8/vim-elm-syntax')
-
-call dein#add('vimplugin/project.vim')
-call dein#add('itchyny/lightline.vim')
-call dein#add('editorconfig/editorconfig-vim')
-call dein#add('mileszs/ack.vim')
-call dein#add('flazz/vim-colorschemes')
-call dein#add('MasayukiFukada/vimSeasonsColorPack')
-
-call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
-call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
-
-call dein#end()
+if dein#load_state(s:dein_dir)
+  call dein#begin(expand('~/.vim/dein'))
+  
+  call dein#add('Shougo/dein.vim')
+  call dein#add('Shougo/vimproc.vim', {
+      \ 'build': {
+      \     'windows': 'tools\\update-dll-mingw',
+      \     'cygwin': 'make -f make_cygwin.mak',
+      \     'mac': 'make -f make_mac.mak',
+      \     'linux': 'make',
+      \     'unix': 'gmake',
+      \    },
+      \ })
+  
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/neomru.vim')
+  call dein#add('Shougo/neosnippet')
+  
+  call dein#add('andys8/vim-elm-syntax')
+  
+  call dein#add('vimplugin/project.vim')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('editorconfig/editorconfig-vim')
+  call dein#add('mileszs/ack.vim')
+  call dein#add('flazz/vim-colorschemes')
+  call dein#add('MasayukiFukada/vimSeasonsColorPack')
+  
+  call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+  
+  call dein#end()
+  call dein#save_state()
+endif
 
 call map(dein#check_clean(), "delete(v:val, 'rf')")
 

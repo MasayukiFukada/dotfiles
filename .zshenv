@@ -1,14 +1,12 @@
 # vim: ft=sh
 
-export ANDROID_HOME=/home/minamo/Android/Sdk
-
-typeset -U path PATH
+typeset -gU path PATH
 path=(
-  "/opt/anyenv/bin"
+  "$HOME/.anyenv/bin"
+  $PATH
+  "$HOME/.yarn/bin"
+  "$HOME/.config/yarn/global/node_modules/.bin"
   "/usr/local/go/bin"
-  "$ANDROID_HOME/tools"
-  "$ANDROID_HOME/platform-tools"
-  $path
   "/usr/local/sbin"
   "/usr/sbin"
   "/sbin"
