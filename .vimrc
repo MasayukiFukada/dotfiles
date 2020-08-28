@@ -269,6 +269,7 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('mileszs/ack.vim')
 call dein#add('flazz/vim-colorschemes')
 call dein#add('MasayukiFukada/vimSeasonsColorPack')
+call dein#add('unfog-io/unfog-vim')
 
 call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
