@@ -69,9 +69,6 @@ myConfig = defaultConfig
         ||| Simplest
         ||| ThreeColMid 1 (3/100) (1/2)
         ||| OneBig (3/4) (3/4)
-        ||| Circle
-        ||| simpleCross
-        ||| Roledex
         ||| spiral (6/7) }
         `additionalKeys`
         [ ((0 , 0x1008FF11), spawn "amixer -q sset Master 2%+")

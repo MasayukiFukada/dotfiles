@@ -285,6 +285,12 @@ if dein#load_state(s:dein_dir)
   
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+
+  " Elixir
+  call dein#add('elixir-editors/vim-elixir')
+
+  " for Unit Test
+  call dein#add('vim-test/vim-test')
   
   call dein#end()
   call dein#save_state()

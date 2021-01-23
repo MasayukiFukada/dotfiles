@@ -11,11 +11,14 @@ path=(
   "/usr/local/sbin"
   "/usr/sbin"
   "/sbin"
+  "$HOME/tool/flutter/bin"
   "$HOME/.go/bin"
   "$HOME/.cargo/bin"
   "$HOME/bin"
   "/usr/games"
   "/usr/local/games"
+  "$HOME/tool/android-studio/bin"
+  "$HOME/tool/android_sdk/platform-tools"
   "$HOME/work/tool-repository/stlink/build/Release/_install/usr/local/bin"
 )
 
