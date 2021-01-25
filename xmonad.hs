@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.SetWMName
 import System.IO
 
 import XMonad.Layout
@@ -54,6 +55,9 @@ myPP = xmobarPP { ppOrder = \(ws:l:t:_)  -> [ws,t]
 , ppSep = "  "
 }
 
+myStartup = do
+    setWMName "LG3D"
+
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 myConfig = defaultConfig
@@ -62,6 +66,7 @@ myConfig = defaultConfig
         , borderWidth = 1
         , focusFollowsMouse = False
         , focusedBorderColor = "#00ff00"
+        , startupHook = myStartup
         , layoutHook = myLayout
         ||| Mirror myLayout
         ||| reflectVert (Mirror myLayout)
