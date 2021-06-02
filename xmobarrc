@@ -36,11 +36,14 @@ Config
     , "-n", "#c3d825"
     , "-h", "#d7003a"
     ] 10
+  , Run Volume "default" "Master"
+    [ "-t", "○ Vol: [<volume>] <status>"
+    ] 10
   , Run Date "<fc=#ffffff> [%a] %Y/%m/%d %H:%M</fc>" "date" 10
   , Run StdinReader
   , Run Locks
   ]
 , sepChar = "%"
 , alignSep = "}{"
-, template = " %StdinReader% }{ %coretemp%%multicpu%%memory%%locks%%date% "
+, template = " %StdinReader% }{ %coretemp%%multicpu%%memory%%default:Master%%locks%%date% "
 }
