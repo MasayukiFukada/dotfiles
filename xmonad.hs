@@ -28,6 +28,7 @@ import XMonad.Hooks.DynamicLog
 
 myLayout = spacing 10 $ gaps [(U, 5),(D, 5),(L, 5),(R, 5)]
            $ (ResizableTall 1 (1/204) (119/204) [])
+           ||| Simplest
 
 main = do
     xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
@@ -61,7 +62,7 @@ myStartup = do
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 myConfig = defaultConfig
-        { terminal = "tilix"
+        { terminal = "/home/minamo/.cargo/bin/alacritty"
         , modMask = mod4Mask
         , borderWidth = 1
         , focusFollowsMouse = False

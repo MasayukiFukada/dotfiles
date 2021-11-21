@@ -1,0 +1,9 @@
+font:
+  size: 13
+
+  normal:
+    family: CodeM
+    style: Regular
+
+background_opacity: 0.8
+

@@ -34,4 +34,4 @@ $HOME/bin/run_compton.sh
 # for Android Studio
 wmname LG3D
 
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"

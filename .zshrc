@@ -15,6 +15,7 @@ path=(
   "$HOME/.go/bin"
   "$HOME/.cargo/bin"
   "$HOME/bin"
+  "$HOME/.local/bin"
   "/usr/games"
   "/usr/local/games"
   "$HOME/tool/android-studio/bin"
