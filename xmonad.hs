@@ -62,7 +62,7 @@ myStartup = do
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 myConfig = defaultConfig
-        { terminal = "/home/minamo/.cargo/bin/alacritty"
+        { terminal = "tilix"
         , modMask = mod4Mask
         , borderWidth = 1
         , focusFollowsMouse = False
