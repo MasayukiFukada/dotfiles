@@ -57,6 +57,7 @@
   template = /home/minamo/.commit_template
 [core]
   quotepath = false
+	editor = vim
 [webui]
   autoupdate = true
 [ghq]
