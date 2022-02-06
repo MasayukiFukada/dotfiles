@@ -37,9 +37,9 @@ Config
     , "-h", "#d7003a"
     ] 10
   , Run Volume "default" "Master"
-    [ "-t", "○ Vol: [<volume>] <status>"
+    [ "-t", "<fc=#ffff88>○ Vol: [<volume>]</fc> <status>"
     ] 10
-  , Run Date "<fc=#ffffff> [%a] %Y/%m/%d %H:%M</fc>" "date" 10
+  , Run Date "<fc=#ffcc55> [%a] %Y/%m/%d %H:%M</fc>" "date" 10
   , Run StdinReader
   , Run Locks
   ]

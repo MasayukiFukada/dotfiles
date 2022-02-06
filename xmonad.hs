@@ -28,7 +28,6 @@ import XMonad.Hooks.DynamicLog
 
 myLayout = spacing 10 $ gaps [(U, 5),(D, 5),(L, 5),(R, 5)]
            $ (ResizableTall 1 (1/204) (119/204) [])
-           ||| Simplest
 
 main = do
     xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
@@ -73,6 +72,7 @@ myConfig = defaultConfig
         ||| reflectVert (Mirror myLayout)
         ||| reflectHoriz myLayout
         ||| Simplest
+        ||| DragPane
         ||| ThreeColMid 1 (3/100) (1/2)
         ||| OneBig (3/4) (3/4)
         ||| spiral (6/7) }

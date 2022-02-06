@@ -61,4 +61,4 @@
 [webui]
   autoupdate = true
 [ghq]
-	root = ~/work/repository
+	root = ~/repository
