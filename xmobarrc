@@ -4,7 +4,7 @@ Config
 { font = "xft:Code M:size=13"
 , bgColor = "#1c1c1c"
 , fgColor = "#404040"
-, position = Bottom
+, position = Top
 , lowerOnStart = True
 , hideOnStart = False
 , allDesktops = True

@@ -72,7 +72,6 @@ myConfig = defaultConfig
         ||| reflectVert (Mirror myLayout)
         ||| reflectHoriz myLayout
         ||| Simplest
-        ||| DragPane
         ||| ThreeColMid 1 (3/100) (1/2)
         ||| OneBig (3/4) (3/4)
         ||| spiral (6/7) }
