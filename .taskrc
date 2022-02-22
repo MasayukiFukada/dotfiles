@@ -40,3 +40,12 @@ include solarized-dark-256.theme
 #include no-color.theme
 
 confirmation=yes
+default.command=ready
+
+calendar.details=full
+calendar.holidays=full
+
+color.calendar.weekend=red on gray1
+color.calendar.weeknumber=color14 on color10
+include /home/minamo/.task/holidays.rc
+
