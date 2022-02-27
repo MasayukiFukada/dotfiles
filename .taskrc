@@ -39,13 +39,30 @@ include solarized-dark-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
 
+# 動作のカスタマイズ
+editor=vim
 confirmation=yes
-default.command=ready
+default.command=next
 
+# カレンダーの表示
 calendar.details=full
-calendar.holidays=full
-
+calendar.details.report=next
+calendar.holidays=sparse
 color.calendar.weekend=red on gray1
 color.calendar.weeknumber=color14 on color10
 include /home/minamo/.task/holidays.rc
+
+# long の表示
+report.long.columns=id,start.active,entry,modified.age,depends,priority,project,tags,recur,wait.remaining,scheduled,due,until,description.count
+
+# next の表示
+report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
+
+# ready の表示
+report.ready.columns=id,start.age,entry.age,priority,project,tags,recur.indicator,scheduled.countdown,due.relative,until.remaining,description.count,urgency
+report.ready.labels=ID,Active,Age,P,Project,Tags,R,S,Due,Until,Description,Urg
+
+# completd の表示
+report.completed.columns=id,uuid.short,entry,end,entry.age,depends,priority,project,tags,recur.indicator,due,description.count
+report.completed.labels=ID,UUID,Created,Completed,Age,Deps,P,Project,Tags,R,Due,Description
 
