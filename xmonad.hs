@@ -26,7 +26,8 @@ import XMonad.Util.Run(spawnPipe)
 
 import XMonad.Hooks.DynamicLog
 
-myLayout = spacing 10 $ gaps [(U, 5),(D, 5),(L, 5),(R, 5)]
+myLayout = spacingRaw True (Border 0 10 10 10) True (Border 10 10 10 10) True
+           $ gaps [(U, 5),(D, 5),(L, 5),(R, 5)]
            $ (ResizableTall 1 (1/204) (119/204) [])
 
 main = do
@@ -60,7 +61,7 @@ myStartup = do
 
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
-myConfig = defaultConfig
+myConfig = def
         { terminal = "tilix"
         , modMask = mod4Mask
         , borderWidth = 1

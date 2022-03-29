@@ -30,12 +30,12 @@ data.location=/home/minamo/.task
 #include dark-256.theme
 #include dark-red-256.theme
 #include dark-green-256.theme
-#include dark-blue-256.theme
+include dark-blue-256.theme
 #include dark-violets-256.theme
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
 #include dark-gray-blue-256.theme
-include solarized-dark-256.theme
+#include solarized-dark-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
 
@@ -46,7 +46,7 @@ default.command=next
 
 # カレンダーの表示
 calendar.details=full
-calendar.details.report=next
+calendar.details.report=list
 calendar.holidays=sparse
 color.calendar.weekend=red on gray1
 color.calendar.weeknumber=color14 on color10
