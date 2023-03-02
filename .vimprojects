@@ -1,0 +1,19 @@
+Hakushi=~/repository/hakushi_template CD=. {
+ CHANGELOG.md
+ LICENSE
+ README.md
+ pom.xml
+ project.clj
+ resources=~/repository/hakushi_template/resources/leiningen/new/hakushi CD=~/repository/hakushi_template {
+  README.md
+  core.clj
+  core_test.clj
+  logback.xml
+  makefile
+  project.clj
+ }
+ src=~/repository/hakushi_template/src/leiningen/new CD=~/repository/hakushi_template filter="*.clj" {
+  hakushi.clj
+ }
+}
+

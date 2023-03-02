@@ -21,6 +21,7 @@ path=(
   "$HOME/tool/android-studio/bin"
   "$HOME/tool/android_sdk/platform-tools"
   "$HOME/work/tool-repository/stlink/build/Release/_install/usr/local/bin"
+  "$HOME/.deno/bin"
 )
 
 export GOPATH=$HOME/.go
@@ -38,9 +39,10 @@ HISTFILE=~/.zsh_history
 export EDITOR="vim"
 export LANG=ja_JP.UTF-8
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
-#export GTK_IM_MODULE=fcitx
-#export QT_IM_MODULE=fcitx
-#export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS=@im=fcitx5
+export CLASSPATH=.:$CLASSPATH:/usr/share/java/sqlite-jdbc-3.39.2.0.jar
 
 #OSによって存在しないコマンドはコメントアウトしている
 alias awk='gawk'
@@ -166,4 +168,20 @@ alias fv=vim-fzf-find
 # Starship
 #
 eval "$(starship init zsh)"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/minamo/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/minamo/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/minamo/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/minamo/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 

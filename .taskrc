@@ -42,7 +42,8 @@ include dark-blue-256.theme
 # 動作のカスタマイズ
 editor=vim
 confirmation=yes
-default.command=next
+#default.command=next
+default.command=long
 
 # カレンダーの表示
 calendar.details=full
@@ -51,9 +52,6 @@ calendar.holidays=sparse
 color.calendar.weekend=red on gray1
 color.calendar.weeknumber=color14 on color10
 include /home/minamo/.task/holidays.rc
-
-# long の表示
-report.long.columns=id,start.active,entry,modified.age,depends,priority,project,tags,recur,wait.remaining,scheduled,due,until,description.count
 
 # next の表示
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
