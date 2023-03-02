@@ -6,7 +6,8 @@ stalonetray &
 dropbox start
 # /usr/bin/blueman-applet &
 
-compton -b --config $HOME/.config/compton/compton.conf
+# compton -b --config $HOME/.config/compton/compton.conf
+picom -b --config /home/minamo/picom.conf &
 
 feh --bg-fill --randomize /home/minamo/Pictures/*.jpg
 
