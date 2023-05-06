@@ -1,7 +1,7 @@
 #!/bin/bash
 
 stalonetray &
-# fcitx
+fcitx5 &
 # ibus-daemon -d
 dropbox start
 # /usr/bin/blueman-applet &

@@ -2,5 +2,5 @@
 
 
 
-google-chrome-stable --user-agent="Mozilla/6.9 (compatible; MSIE 10.0; Windows NT 9.6; WOW64; Trident/6.0) AppleWebKit/602.3.12 (KHTML, like Gecko) Chrome/70.0" --user-data-dir="/tmp"
+google-chrome-stable --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3.12 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" --user-data-dir="/tmp"
 
