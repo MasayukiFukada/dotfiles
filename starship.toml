@@ -1,87 +1,47 @@
-# Disable the newline at the start of the prompt
-add_newline = false
-
-# Wait 10 milliseconds for starship to check files under the current directory.
-scan_timeout = 10
-
-[battery]
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
+format = '''
+\[$username on $hostname\($localip\)\]$memory_usage $directory $git_branch $package
+$character'''
 
 [character]
-style_success = "#ff69b4"
-symbol = "➜"
-error_symbol = "✗"
-use_symbol_for_status = true
+success_symbol = "[♨](bold green)"
+error_symbol = "[♨](bold red)"
 
 [directory]
-style = "#ba55d3"
-truncation_length = 0
+format = "[$path]($style)"
+style = "yellow"
 truncate_to_repo = false
+truncation_length = 3
+truncation_symbol = "…/"
 
-[dotnet]
-symbol = "🥅 "
-style = "green"
-heuristic = false
-
-[env_var]
+[package]
 disabled = false
+format = '[$symbol$version]($style)'
 
 [git_branch]
-style = "#dda0dd"
-symbol = "♥:"
-truncation_length = 20
-truncation_symbol = ""
-
-[git_commit]
-disabled = false
-commit_hash_length = 4
-
-[git_state]
-progress_divider = " of "
-cherry_pick = "🍒 PICKING"
-
-[git_status]
-conflicted = "🏳 "
-ahead = "🏎 💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷<200d>"
-modified = "📝"
-staged.value = "++"
-staged.style = "green"
-staged_count.enabled = true
-staged_count.style = "green"
-renamed = "👅"
-deleted = "🗑 "
+format = "[$symbol](green)[$branch]($style)"
+style = "italic green"
+symbol = ""
 
 [hostname]
 ssh_only = false
-prefix = "⟪"
-suffix = "⟫"
-trim_at = ".companyname.com"
-disabled = true
+format = '[$ssh_symbol](bold blue)[$hostname](bold red)'
+trim_at = '.companyname.com'
+disabled = false
 
-[jobs]
-symbol = "+ "
-threshold = 4
+[username]
+disabled = false
+show_always = true
+style_root = 'bold red'
+style_user = 'bold yellow'
+format = '[$user]($style)'
+
+[localip]
+ssh_only = false
+format = '[$localipv4](bold red)'
+disabled = false
 
 [memory_usage]
-show_percentage = true
-show_swap = true
+disabled = false
+format = "MEM:[$ram_pct](bold white) SWP:[$swap_pct](bold white)"
 threshold = -1
-symbol = " "
-separator = "/"
-style = "bold dimmed green"
 
-[nodejs]
-style = "#ffc0cb"
-
-[ruby]
-symbol = " "
-style = "#ffc0cb"
-
-[package]
-style = "#ffc0cb"
-symbol = " "
