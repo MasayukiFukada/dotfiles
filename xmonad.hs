@@ -62,11 +62,11 @@ myStartup = do
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 myConfig = def
-        { terminal = "tilix"
+        { terminal = "xfce4-terminal"
         , modMask = mod4Mask
         , borderWidth = 1
         , focusFollowsMouse = False
-        , focusedBorderColor = "#00ff00"
+        , focusedBorderColor = "#ff0000"
         , startupHook = myStartup
         , layoutHook = myLayout
         ||| Mirror myLayout

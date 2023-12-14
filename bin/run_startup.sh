@@ -6,6 +6,12 @@ fcitx5 &
 dropbox start
 # /usr/bin/blueman-applet &
 
+tzclock &
+
+# スクリーン系の管理
+xset -dpms
+xset s noblank
+
 # compton -b --config $HOME/.config/compton/compton.conf
 picom -b --config /home/minamo/picom.conf &
 
