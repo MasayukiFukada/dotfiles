@@ -9,12 +9,12 @@ import XMonad.Layout.Gaps
 import XMonad.Layout.NoBorders         -- In Full mode, border is no use
 import XMonad.Layout.PerWorkspace      -- Configure layouts on a per-workspace
 import XMonad.Layout.ResizableTile     -- Resizable Horizontal border
+import XMonad.Layout.Accordion
 import XMonad.Layout.Simplest
 import XMonad.Layout.SimplestFloat
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.OneBig
 import XMonad.Layout.Circle
-import XMonad.Layout.Cross
 import XMonad.Layout.Reflect
 import XMonad.Layout.Roledex
 import XMonad.Layout.Spiral
@@ -26,14 +26,23 @@ import XMonad.Util.Run(spawnPipe)
 
 import XMonad.Hooks.DynamicLog
 
-myLayout = spacingRaw True (Border 0 10 10 10) True (Border 10 10 10 10) True
-           $ gaps [(U, 5),(D, 5),(L, 5),(R, 5)]
-           $ (ResizableTall 1 (1/204) (119/204) [])
+myLayout = spacing gapwidth $ gaps [(U, gwU),(D, gwD),(L, gwL),(R, gwR)]
+           $ (ResizableTall 1 (1/205) (120/205) [])
 
 main = do
     xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
 myBar = "xmobar"
+
+-- Border width
+borderwidth = 4
+
+-- gapwidth
+gapwidth  = 4
+gwU = 2
+gwD = 1
+gwL = 18
+gwR = 17
 
 -- Color Setting
 colorBlue      = "#868bae"
@@ -45,15 +54,15 @@ colorNormalbg  = "#1c1c1c"
 colorfg        = "#a8b6b8"
 
 myPP = xmobarPP { ppOrder = \(ws:l:t:_)  -> [ws,t]
-, ppCurrent = xmobarColor colorRed     colorNormalbg . \s -> "●"
-, ppUrgent = xmobarColor colorGray    colorNormalbg . \s -> "●"
-, ppVisible = xmobarColor colorRed     colorNormalbg . \s -> "⦿"
-, ppHidden = xmobarColor colorGray    colorNormalbg . \s -> "●"
-, ppHiddenNoWindows = xmobarColor colorGray    colorNormalbg . \s -> "○"
-, ppTitle = xmobarColor colorRed     colorNormalbg
-, ppOutput = putStrLn
-, ppWsSep = " "
-, ppSep = "  "
+, ppCurrent         = xmobarColor colorRed   colorNormalbg . \s -> "●"
+, ppUrgent          = xmobarColor colorGray  colorNormalbg . \s -> "●"
+, ppVisible         = xmobarColor colorGreen colorNormalbg . \s -> "⦿"
+, ppHidden          = xmobarColor colorGray  colorNormalbg . \s -> "●"
+, ppHiddenNoWindows = xmobarColor colorGray  colorNormalbg . \s -> "○"
+, ppTitle           = xmobarColor colorRed   colorNormalbg
+, ppOutput          = putStrLn
+, ppWsSep           = " "
+, ppSep             = "  "
 }
 
 myStartup = do
@@ -64,15 +73,17 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 myConfig = def
         { terminal = "xfce4-terminal"
         , modMask = mod4Mask
-        , borderWidth = 1
+        , borderWidth = borderwidth
         , focusFollowsMouse = False
         , focusedBorderColor = "#ff0000"
         , startupHook = myStartup
-        , layoutHook = myLayout
+        , layoutHook = reflectVert Accordion
+        ||| Simplest
+        ||| Circle
+        ||| myLayout
+        ||| reflectHoriz myLayout
         ||| Mirror myLayout
         ||| reflectVert (Mirror myLayout)
-        ||| reflectHoriz myLayout
-        ||| Simplest
         ||| ThreeColMid 1 (3/100) (1/2)
         ||| OneBig (3/4) (3/4)
         ||| spiral (6/7) }
