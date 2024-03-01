@@ -14,7 +14,6 @@ import XMonad.Layout.Simplest
 import XMonad.Layout.SimplestFloat
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.OneBig
-import XMonad.Layout.Circle
 import XMonad.Layout.Reflect
 import XMonad.Layout.Roledex
 import XMonad.Layout.Spiral
@@ -79,7 +78,6 @@ myConfig = def
         , startupHook = myStartup
         , layoutHook = reflectVert Accordion
         ||| Simplest
-        ||| Circle
         ||| myLayout
         ||| reflectHoriz myLayout
         ||| Mirror myLayout

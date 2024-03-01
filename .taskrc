@@ -27,10 +27,10 @@ data.location=/home/minamo/.task
 #include light-16.theme
 #include light-256.theme
 #include dark-16.theme
-#include dark-256.theme
+include dark-256.theme
 #include dark-red-256.theme
 #include dark-green-256.theme
-include dark-blue-256.theme
+#include dark-blue-256.theme
 #include dark-violets-256.theme
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
@@ -53,14 +53,11 @@ color.calendar.weekend=red on gray1
 color.calendar.weeknumber=color14 on color10
 include /home/minamo/.task/holidays.rc
 
-# next の表示
-report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
+report.list.columns=id,priority,project,due,description.count,uuid,urgency
+report.list.labels=ID,優先度,プロジェクト,期限,詳細,UUID,Ur
 
-# ready の表示
-report.ready.columns=id,start.age,entry.age,priority,project,tags,recur.indicator,scheduled.countdown,due.relative,until.remaining,description.count,urgency
-report.ready.labels=ID,Active,Age,P,Project,Tags,R,S,Due,Until,Description,Urg
+report.long.columns=id,project,due,description
+report.long.labels=ID,プロジェクト,期限,詳細
+report.long.sort=project-,due+
 
-# completd の表示
-report.completed.columns=id,uuid.short,entry,end,entry.age,depends,priority,project,tags,recur.indicator,due,description.count
-report.completed.labels=ID,UUID,Created,Completed,Age,Deps,P,Project,Tags,R,Due,Description
-
+news.version=2.6.0
